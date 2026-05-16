@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 @Value
 public class BudgetDto implements Serializable {
     Long id;
-    UserDto user;
-    CategoryDto category;
+    UserSummaryDto user;
+    CategorySummaryDto category;
     BigDecimal amountLimit;
     Integer month;
     Integer year;
