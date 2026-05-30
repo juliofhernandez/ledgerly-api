@@ -9,10 +9,10 @@ import java.math.BigDecimal;
  * DTO for {@link com.juliofhernandez.ledgerlyapi.entity.Budget}
  */
 @Value
-public class BudgetDto implements Serializable {
+public class BudgetDTO implements Serializable {
     Long id;
-    UserSummaryDto user;
-    CategorySummaryDto category;
+    UserSummaryDTO user;
+    CategorySummaryDTO category;
     BigDecimal amountLimit;
     Integer month;
     Integer year;

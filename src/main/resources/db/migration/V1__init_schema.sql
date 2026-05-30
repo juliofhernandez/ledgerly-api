@@ -1,6 +1,6 @@
 CREATE TABLE "users"
 (
-    "id"               bigint PRIMARY KEY,
+    "id"               bigserial PRIMARY KEY,
     "first_name"       varchar,
     "last_name"        varchar,
     "email"            varchar UNIQUE NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE "users"
 
 CREATE TABLE "transactions"
 (
-    "id"               bigint PRIMARY KEY,
+    "id"               bigserial PRIMARY KEY,
     "user_id"          bigint NOT NULL,
     "category_id"      bigint,
     "type"             varchar,
@@ -26,7 +26,7 @@ CREATE TABLE "transactions"
 
 CREATE TABLE "categories"
 (
-    "id"          bigint PRIMARY KEY,
+    "id"          bigserial PRIMARY KEY,
     "user_id"     bigint  NOT NULL,
     "name"        varchar NOT NULL,
     "description" text,
@@ -38,7 +38,7 @@ CREATE TABLE "categories"
 
 CREATE TABLE "budgets"
 (
-    "id"           bigint PRIMARY KEY,
+    "id"           bigserial PRIMARY KEY,
     "category_id"  bigint NOT NULL,
     "user_id"      bigint NOT NULL,
     "amount_limit" numeric(10, 2),

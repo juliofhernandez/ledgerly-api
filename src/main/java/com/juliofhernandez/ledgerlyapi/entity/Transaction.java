@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,7 +29,7 @@ public class Transaction {
     private String type;
     private BigDecimal amount;
     private String description;
-    private LocalDate transactionDate;
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+    private LocalDateTime transactionDate;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
